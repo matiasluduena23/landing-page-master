@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+:root {
+  --dark-blue: hsl(217, 28%, 15%);
+  --dark-blue-main: hsl(218, 28%, 13%);
+  --dark-blue-footer: hsl(216, 53%, 9%);
+  --dark-blue-testi: hsl(219, 30%, 18%);
+
+  --cyan: hsl(176, 68%, 64%);
+  --blue: hsl(198, 60%, 50%);
+  --red: hsl(0, 100%, 63%);
+
+  --ff: 'Open Sans', sans-serif;
+  --ff-2: 'Raleway', sans-serif;
+
+}
+
+
+body {
+  font-family: var(--ff);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.container {
+  width: min(85%, 1100px);
+  margin-inline: auto;
+}
+
+h1,h2,h3,h4 {
+  line-height: 1.1;
+  font-family: var(--ff-2);
+}
+
+input, select, textarea, button{font-family:inherit; 
+  font-family: var(--ff-2);
+}
+
+a {
+  text-decoration: none;
+}
+
+li { 
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-auto{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+
+/* add testimonial image  */
+.card-testimonial:first-child {
+  position: relative;
+}
+
+.card-testimonial:first-child::before {
+  content: url('../assets/bg-quotes.png');
+  object-fit: contain;
+  position: absolute;
+  top: -45px;
+  left: 0;
+  
+}

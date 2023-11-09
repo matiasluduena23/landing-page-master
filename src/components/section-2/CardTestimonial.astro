@@ -1,0 +1,42 @@
+---
+const { data } = Astro.props;
+const { text, name, work, image } = data;
+---
+
+<article class="card-testimonial">
+    <p class="body-text">{text}</p>
+    <div class="wrap-content">
+        <img src={image} alt="" />
+        <div class="wrap-info">
+            <p class="name">{name}</p>
+            <p class="work">{work}</p>
+        </div>
+    </div>
+</article>
+
+<style>
+    article {
+        padding: 2rem 1.3rem;
+        background-color: var(--dark-blue-testi);
+        border-radius: 5px;
+        text-align: start;
+        font-size: 12px;
+    }
+
+    .wrap-content {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    img {
+        width: 30px;
+        border-radius: 50%;
+    }
+
+    .name {
+        font-weight: 700;
+        font-size: 14px;
+    }
+</style>

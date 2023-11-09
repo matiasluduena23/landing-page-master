@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import FeatureCard from '../section-1/FeatureCard.astro';
+
+const allFeature = await getCollection('feature');
+---
+
+<section>
+    <div class="container">
+        <div class="grid-auto">
+            {allFeature.map((feature) => <FeatureCard data={feature.data} />)}
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: var(--dark-blue-main);
+        color: white;
+        text-align: center;
+        padding-block: 7rem;
+    }
+</style>
