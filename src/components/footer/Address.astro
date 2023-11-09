@@ -1,0 +1,50 @@
+---
+import locationIcon from '../../assets/icon-location.svg';
+import phoneIcon from '../../assets/icon-phone.svg';
+import emailIcon from '../../assets/icon-email.svg';
+---
+
+<address>
+    <div class="wrap-location">
+        <img src={locationIcon.src} alt="icon" />
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua
+        </p>
+    </div>
+    <div class="wrap-contact">
+        <span>
+            <img src={phoneIcon.src} alt="icon" />
+            <a href="tel:+15431234567">+1-543-123-4567</a>
+        </span>
+
+        <span>
+            <img src={emailIcon.src} alt="icon" />
+            <a href="mailto:example@fylo.com">example@fylo.com</a>
+        </span>
+    </div>
+</address>
+
+<style>
+    address {
+        color: white;
+        margin-block: 5rem;
+        font-style: normal;
+    }
+
+    .wrap-location,
+    span {
+        display: flex;
+        align-items: start;
+        gap: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    img {
+        margin-top: 5px;
+    }
+
+    a {
+        color: white;
+    }
+</style>

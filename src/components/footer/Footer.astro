@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/logo.svg';
+import Address from './Address.astro';
+import ListItems from './ListItems.astro';
+import SocialIcons from './SocialIcons.astro';
+---
+
+<footer>
+    <div class="container">
+        <div class="grid">
+            <Image src={logo} alt="logo" />
+            <Address />
+            <ListItems />
+            <SocialIcons />
+        </div>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background-color: var(--dark-blue-footer);
+        padding-block: 5rem;
+    }
+    .grid {
+        padding-inline: 1rem;
+    }
+</style>
