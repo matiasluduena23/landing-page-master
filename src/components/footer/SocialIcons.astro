@@ -57,18 +57,29 @@
 
     a {
         border-radius: 50%;
-        border: 1px solid white;
+        border: 1px solid var(--text);
         padding: 0.3rem;
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: border 200ms ease-in-out;
     }
 
     svg {
         width: 20px;
         height: 20px;
     }
+
     svg path {
-        fill: #fff;
+        fill: var(--text);
+        transition: fill 200ms ease-in-out;
+    }
+
+    a:hover {
+        border: 1px solid var(--cyan);
+    }
+
+    a:hover svg path {
+        fill: var(--cyan);
     }
 </style>

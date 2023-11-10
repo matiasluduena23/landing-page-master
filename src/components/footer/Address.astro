@@ -27,7 +27,6 @@ import emailIcon from '../../assets/icon-email.svg';
 
 <style>
     address {
-        color: white;
         margin-block: 5rem;
         font-style: normal;
     }
@@ -45,6 +44,11 @@ import emailIcon from '../../assets/icon-email.svg';
     }
 
     a {
+        color: var(--text);
+        transition: color 200ms ease-in-out;
+    }
+
+    a:hover {
         color: white;
     }
 </style>

@@ -1,8 +1,8 @@
 ---
-const { text } = Astro.props;
+const { text, id } = Astro.props;
 ---
 
-<button>{text}</button>
+<button id={id}>{text}</button>
 
 <style>
     button {
@@ -14,5 +14,9 @@ const { text } = Astro.props;
         background: linear-gradient(to right bottom, var(--cyan), var(--blue));
         color: white;
         cursor: pointer;
+    }
+
+    button:hover {
+        filter: brightness(1.2);
     }
 </style>

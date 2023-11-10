@@ -11,8 +11,9 @@
   --dark-blue-main: hsl(218, 28%, 13%);
   --dark-blue-footer: hsl(216, 53%, 9%);
   --dark-blue-testi: hsl(219, 30%, 18%);
+  --text: hsl(180, 1%, 85%);
 
-  --cyan: hsl(176, 68%, 64%);
+  --cyan:  hsl(176, 68%, 64%);
   --blue: hsl(198, 60%, 50%);
   --red: hsl(0, 100%, 63%);
 
@@ -86,4 +87,9 @@ img {
   top: -45px;
   left: 0;
   
+}
+
+
+dialog::backdrop {
+  background: red
 }

@@ -4,10 +4,12 @@ import logo from '../../assets/logo.svg';
 import Address from './Address.astro';
 import ListItems from './ListItems.astro';
 import SocialIcons from './SocialIcons.astro';
+import GetReadyCard from './GetReadyCard.astro';
 ---
 
 <footer>
     <div class="container">
+        <GetReadyCard />
         <div class="grid">
             <Image src={logo} alt="logo" />
             <Address />
@@ -20,7 +22,8 @@ import SocialIcons from './SocialIcons.astro';
 <style>
     footer {
         background-color: var(--dark-blue-footer);
-        padding-block: 5rem;
+        padding-block: 10rem 5rem;
+        color: var(--text);
     }
     .grid {
         padding-inline: 1rem;

@@ -1,0 +1,114 @@
+---
+import Button from '../Button.astro';
+---
+
+<article>
+    <h2>Get early access today</h2>
+    <p>
+        It only takes a minute to sign up and our free starter tier is extremely
+        generous. If you have any questions, our support team would be happy to
+        help you.
+    </p>
+    <!-- form -->
+    <form id="form-email">
+        <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email@example.com"
+        />
+
+        <span class="error-span">Can't be black</span>
+        <Button text="Get Started For Free" id="send-email" />
+    </form>
+    <!-- dialog -->
+    <dialog id="dialog">
+        <h2>Let's started</h2>
+        <h3 class="email-dialog"></h3>
+        <p>Check your inbox to confirm the sign up</p>
+        <Button text="Close" id="close-dialog" />
+    </dialog>
+</article>
+
+<style>
+    article {
+        background: var(--dark-blue-testi);
+        padding: 2rem 1rem;
+        color: var(--text);
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
+        margin-top: -15rem;
+        transform: translateY(-5rem);
+    }
+
+    dialog::backdrop {
+        background: red;
+    }
+
+    #dialog {
+        background: white;
+        color: var(--dark-blue-testi);
+        border: 1px solid var(--cyan);
+        border-radius: 10px;
+        padding: 2rem 1rem;
+        margin-inline: auto;
+    }
+
+    #dialog h2 {
+        color: var(--dark-blue-testi);
+    }
+
+    h3 {
+        color: var(--cyan);
+        margin-block: 0.7rem;
+    }
+
+    dialog p {
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    form {
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        position: relative;
+    }
+
+    span {
+        color: var(--red);
+        position: absolute;
+        bottom: 2.4rem;
+        left: 1rem;
+        display: none;
+    }
+
+    input {
+        padding: 0.7rem;
+        border-radius: 30px;
+        font-weight: 700;
+        border: none;
+        padding-left: 1.5rem;
+    }
+
+    input:focus {
+        outline: 1px solid var(--cyan);
+    }
+
+    input::placeholder {
+        color: #d8d7d7;
+    }
+
+    /* add class on error */
+    form.error span {
+        display: block;
+    }
+</style>
