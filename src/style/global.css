@@ -78,18 +78,17 @@ img {
 /* add testimonial image  */
 .card-testimonial:first-child {
   position: relative;
+  
 }
 
-.card-testimonial:first-child::before {
+.card-testimonial:first-child::after {
   content: url('../assets/bg-quotes.png');
   object-fit: contain;
   position: absolute;
-  top: -45px;
+  top: -35px;
   left: 0;
+ 
   
 }
 
 
-dialog::backdrop {
-  background: red
-}

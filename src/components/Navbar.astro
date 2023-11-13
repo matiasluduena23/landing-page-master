@@ -17,23 +17,24 @@ import logo from '../assets/logo.svg';
 
 <style>
     nav {
-        padding-block: 2rem;
+        padding-block: 3rem;
     }
 
     .wrap-logo {
-        width: 80px;
+        width: clamp(80px, 7vw, 200px);
     }
 
     ul {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     .nav-item {
         color: var(--text);
         font-family: var(--ff-2);
         position: relative;
+        font-size: clamp(14px, 2.5vw, 20px);
     }
 
     .nav-item::before {

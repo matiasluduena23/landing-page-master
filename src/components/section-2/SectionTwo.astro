@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import imgPeople from '../../assets/illustration-stay-productive.png';
-import arrow from '../../assets/icon-arrow.svg';
 import Testimonial from './Testimonial.astro';
 ---
 
@@ -95,8 +94,9 @@ import Testimonial from './Testimonial.astro';
     }
 
     h2 {
-        font-size: 1.1rem;
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
         color: white;
+        max-width: 400px;
     }
 
     .icon {
@@ -126,5 +126,14 @@ import Testimonial from './Testimonial.astro';
 
     a:hover svg circle {
         fill: white;
+    }
+
+    @media (min-width: 800px) {
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            align-items: center;
+        }
     }
 </style>

@@ -14,7 +14,7 @@ btnSendEmail?.addEventListener('click', (e) => {
         }else if (!validateEmail(inputValue)){
             showError(`Invalid Email`)
         }else {
-          (dialog as HTMLDialogElement).show();
+          (dialog as HTMLDialogElement).showModal();
             removeError();
             messageDialog(inputValue);
         }   
@@ -51,5 +51,5 @@ function showError(message:string) {
   function messageDialog(inputValue: string) {
     const element = document.querySelector('.email-dialog');
     console.log(element);
-    (element as HTMLHeadingElement).innerText  = `${inputValue}!!!`;
+    (element as HTMLHeadingElement).innerText  = `${inputValue}`;
   }
